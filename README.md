@@ -44,6 +44,8 @@ Libraries Used
   * [Glide][90] for image loading
   * [Dagger][92]: for [dependency injection][93]
   * [RxJava][91] for managing background threads 
+  * [OkHttp][94] for sending and receive HTTP-based network requests
+  * [Retrofit][95] for retrieving and uploading JSON (or other structured data) via a REST based webservice
 
 [0]: https://developer.android.com/jetpack/components
 [1]: https://developer.android.com/topic/libraries/support-library/packages#v7-appcompat
@@ -65,6 +67,8 @@ Libraries Used
 [91]: https://github.com/ReactiveX/RxJava
 [92]: https://dagger.dev/
 [93]: https://developer.android.com/training/dependency-injection
+[94]: https://square.github.io/okhttp/
+[95]: https://square.github.io/retrofit/
 
 Android Studio IDE setup
 ------------------------
