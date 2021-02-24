@@ -12,6 +12,19 @@ There are two Gradle tasks for testing the project:
 * `connectedAndroidTest` - for running Espresso on a connected device
 * `test` - for running unit tests
 
+### Running on a virtual device
+
+1.  Clone repository https://github.com/erzhhhh/skysky.git
+2.  Open the AVD Manager (**Tools** -> **Android** -> **AVD Manager**), https://i.imgur.com/881HJHx.png
+3.  Create a new Virtual Device
+4.  Finish and click play!
+
+### Running on a hardware device
+
+1.  Clone repository https://github.com/erzhhhh/skysky.git
+2.  [Configure Your System to Detect Your Android Device][96]
+3.  Finish and click play!
+
 Screenshots
 -----------
 
@@ -69,11 +82,7 @@ Libraries Used
 [93]: https://developer.android.com/training/dependency-injection
 [94]: https://square.github.io/okhttp/
 [95]: https://square.github.io/retrofit/
-
-Android Studio IDE setup
-------------------------
-For development, the latest version of Android Studio is required. The latest version can be
-downloaded from [here](https://developer.android.com/studio/).
+[96]: https://developer.android.com/studio/run/device
 
 Support
 -------
