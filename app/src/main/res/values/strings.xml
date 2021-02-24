@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">skysky</string>
+    <string name="search_hint">Word search</string>
+    <string name="empty_search_hint">Let\'s search for words and learn new things about them!</string>
+    <string name="no_words_found">Words not found</string>
+    <string name="error_retry">Retry</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="searchBackgroundColor" format="color" />
+    <attr name="cardBackgroundColor" format="color" />
+    <attr name="expandedWordBackgroundColor" format="color" />
+    <attr name="closeIconBackgroundColor" format="color" />
+    <attr name="playIconBackgroundColor" format="color" />
+    <declare-styleable name="StackView">
+        <attr name="textSizForStack" format="dimension" />
+    </declare-styleable>
+
+    <attr name="state_playing" format="boolean" />
+</resources>

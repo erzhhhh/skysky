@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/indent_60"
+        android:paddingStart="@dimen/indent_16"
+        android:paddingEnd="@dimen/indent_16">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/imageLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.example.skysky.presentation.customviews.StackView
+                android:id="@+id/stack"
+                android:layout_width="@dimen/indent_60"
+                android:layout_height="@dimen/indent_50"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:textSizForStack="@dimen/stack_text_size" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/indent_60"
+                android:layout_height="@dimen/indent_60"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="gone" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/original"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/indent_8"
+            android:singleLine="true"
+            android:textAppearance="@android:style/TextAppearance.Material.Body2"
+            app:layout_constraintBottom_toTopOf="@id/translation"
+            app:layout_constraintEnd_toStartOf="@id/button"
+            app:layout_constraintStart_toEndOf="@id/imageLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="rapidly" />
+
+        <TextView
+            android:id="@+id/translation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/indent_8"
+            android:singleLine="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button"
+            app:layout_constraintStart_toEndOf="@id/imageLayout"
+            app:layout_constraintTop_toBottomOf="@id/original"
+            tools:text="стремительно" />
+
+        <ImageView
+            android:id="@+id/button"
+            android:layout_width="@dimen/indent_20"
+            android:layout_height="@dimen/indent_20"
+            android:background="@drawable/ic_iconfinder_down"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

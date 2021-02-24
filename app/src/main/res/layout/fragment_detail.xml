@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="word"
+            type="com.example.skysky.data.Word" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/closeButton"
+                android:layout_width="@dimen/indent_48"
+                android:layout_height="@dimen/indent_48"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="@dimen/indent_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_cancel" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/imageCardView"
+                android:layout_width="@dimen/indent_350"
+                android:layout_height="@dimen/indent_350"
+                android:layout_marginTop="@dimen/indent_28"
+                android:scaleType="centerInside"
+                app:cardBackgroundColor="?cardBackgroundColor"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="1dp"
+                app:cardPreventCornerOverlap="false"
+                app:layout_constraintBottom_toTopOf="@id/transcription"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/closeButton">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        imageUrl="@{word.meaning.imageUrl}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toTopOf="@id/guidelineImageView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.5" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guidelineImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.75" />
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/indent_16"
+                        android:layout_marginEnd="@dimen/indent_16"
+                        android:text="@{word.word}"
+                        android:textAppearance="@android:style/TextAppearance.Material.Headline"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@id/meaning"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/guidelineImageView" />
+
+                    <TextView
+                        android:id="@+id/meaning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/indent_16"
+                        android:layout_marginEnd="@dimen/indent_16"
+                        android:paddingBottom="@dimen/indent_8"
+                        android:text="@{word.meaning.translation.text}"
+                        android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/text" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/transcription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/indent_16"
+                android:layout_marginTop="@dimen/indent_28"
+                android:layout_marginEnd="@dimen/indent_16"
+                android:text="@{word.meaning.transcription}"
+                android:textAppearance="@android:style/TextAppearance.Material.Subhead"
+                app:layout_constraintBottom_toTopOf="@id/playButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageCardView" />
+
+            <com.example.skysky.presentation.customviews.PlayButton
+                android:id="@+id/playButton"
+                android:layout_width="@dimen/indent_50"
+                android:layout_height="@dimen/indent_50"
+                android:layout_marginTop="@dimen/indent_36"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/transcription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
