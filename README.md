@@ -38,20 +38,6 @@ Just a small project to practice Android architecture and make your brain happy 
 
 ---
 
-## Getting started 🚀
-
-1. Clone the repo:
-
-   ```bash
-   git clone https://github.com/erzhhhh/skysky.git
-   cd skysky
-   ```
-2. Open in Android Studio 🏗️
-3. Sync Gradle and build the project 🔄
-4. Run on a device or emulator 📱
-
----
-
 ## Project structure 🗂️
 
 ```
